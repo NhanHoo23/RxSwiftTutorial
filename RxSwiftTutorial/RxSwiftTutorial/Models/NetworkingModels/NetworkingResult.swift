@@ -10,12 +10,27 @@ import MTSDK
 
 extension CodingUserInfoKey {
     static let contentIdentifier = CodingUserInfoKey(rawValue: "contentIdentifier")!
+    // nó sẽ dùng userInfo khi decode giúp decode chính xác hơn
 }
 
-struct NetworkingResult<Content: Decodable>: Decodable {
+// "key" : [
+//    {
+//      JSON cho item có kiểu là A
+//    },
+//    {
+//      JSON cho item có kiểu là A
+//    },
+//    {
+//      JSON cho item có kiểu là A
+//    },
+//]
+// contentIdentifier là key còn Content là [A]
+
+//Decodable: cho phép giải mã Json sang các đối tượng Swift thuộc Codable
+struct NetworkingResult<Content: Decodable>: Decodable { //Content là kiểu dữ liệu muốn chuyển đổi về
     let content: Content
     
-    private struct CodingKeys: CodingKey {
+    private struct CodingKeys: CodingKey { //Sử dụng CodingKeys để định danh các trường dữ liệu
         var stringValue: String
         var intValue: Int? = nil
         

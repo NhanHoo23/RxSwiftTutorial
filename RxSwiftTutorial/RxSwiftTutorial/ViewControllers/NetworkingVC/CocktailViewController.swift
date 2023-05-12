@@ -75,15 +75,16 @@ extension CocktailViewController {
         
         let downloadItems = newCategories
             .flatMap {categories in
+                //sử dụng toán tử from vì cần arr truyền vào
                 return Observable.from(categories.map { category in
                     Networking.shared.getDrinks(kind: "c", value: category.strCategory)
                 })
             }
-            .merge(maxConcurrent: 2)
+            .merge(maxConcurrent: 2) //gộp các Observable con và chỉ cho tối đa chạy trên 2 luồng
         
         let updateCategories = newCategories.flatMap { categories in
             downloadItems
-                .enumerated()
+                .enumerated() // kiểu dử liệu của downloadItems update thành (index: Int, drinks: [Drink])
                 .scan([]) {(updated, element: (index: Int, drinks: [Drink])) -> [CocktailCategory] in
                     var new: [CocktailCategory] = updated
                     new.append(CocktailCategory(strCategory: categories[element.index].strCategory, items: element.drinks))

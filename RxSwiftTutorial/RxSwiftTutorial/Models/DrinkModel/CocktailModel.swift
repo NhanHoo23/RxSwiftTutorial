@@ -7,12 +7,8 @@
 
 import MTSDK
 
-// MARK: - DrinkResult
-struct CategoryResult<T: Codable>: Codable { //codable: để chuyển đổi dữ liệu 1 cách nhanh chóng, nhưng bắt buộc các properties cũng phải codable
-    let drinks: [T]
-}
 
-// MARK: - Drink
+//codable: để chuyển đổi dữ liệu 1 cách nhanh chóng, nhưng bắt buộc các properties cũng phải codable. Nó bao gồm các Encodable và Decodable
 struct CocktailCategory: Codable {
     let strCategory: String
     var items = [Drink]()
@@ -21,3 +17,8 @@ struct CocktailCategory: Codable {
         case strCategory
     }
 }
+
+struct CategoryResult<T: Codable>: Codable { // <T> là dạng generic
+    let drinks: [T]
+}
+

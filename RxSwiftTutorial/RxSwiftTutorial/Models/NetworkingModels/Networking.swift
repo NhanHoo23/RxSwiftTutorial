@@ -52,20 +52,31 @@ final class Networking {
                 throw NetworkingError.invalidURL(url?.absoluteString ?? "n/a")
             }
             
-            components.queryItems = try query .compactMap {(key, value) in
-                guard let v = value as? CustomStringConvertible else {
+            //URLComponent để tạo URl 1 cách an toàn và hiệu quả, dùng để truy cập và cập nhật các thành phần cụ thể
+            //Ví dụ: URL base là "https://www.thecocktaildb.com/api/json/v1/1/", khi ta tạo đối tượng URLComponent từ "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list"
+            //nếu resolvingAgainstBaseURL là true thì các thành phần cụ thể của URL trên là "list.php"(path) và c=list(query)
+            //nếu resolvingAgainstBaseURL là false thì các thành phần cụ thể của URL trên là 1(path), "list.php"(path) và c=list(query)
+            
+            
+            //thêm các đối tượng QueryItem vào thuộc tính queryItems của đối tượng component
+            components.queryItems = try query.compactMap {(key, value) in
+                guard let v = value as? CustomStringConvertible else { 
                     throw NetworkingError.invalidParameter(key, value)
                 }
+                print("⭐️ v \(v)\n⭐️ v.decrip \(v.description)")
                 return URLQueryItem(name: key, value: v.description)
             }
             
+            //tạo ra finalURL
             guard let finalURL = components.url else {
                 throw NetworkingError.invalidURL(url?.absoluteString ?? "n/a")
             }
             
+            //gửi request đến máy chủ
             let request = URLRequest(url: finalURL)
             
             return URLSession.shared.rx.response(request: request)
+            //observable lắng nghe các sự kiện của URLSession và đưa ra kết quả cuối cùng dạng của một tuple bao gồm respone(HTTPURLResponse) và data(Data)
                 .map {(result: (response: HTTPURLResponse, data: Data)) -> T in
                     let decoder = JSONDecoder()
                     if contentIdentifier != "" {
