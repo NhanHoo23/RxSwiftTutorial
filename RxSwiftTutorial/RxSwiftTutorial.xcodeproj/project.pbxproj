@@ -21,6 +21,14 @@
 		72D25B2E2A0CA20E000645B1 /* FetchingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B2D2A0CA20E000645B1 /* FetchingTableViewCell.swift */; };
 		72D25B302A0CA59E000645B1 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B2F2A0CA59E000645B1 /* MusicModel.swift */; };
 		72D25B332A0CF562000645B1 /* CocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B322A0CF562000645B1 /* CocktailViewController.swift */; };
+		72D25B352A0CF9CA000645B1 /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B342A0CF9CA000645B1 /* DrinksViewController.swift */; };
+		72D25B372A0CF9E0000645B1 /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B362A0CF9E0000645B1 /* CocktailTableViewCell.swift */; };
+		72D25B392A0CF9E9000645B1 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B382A0CF9E9000645B1 /* DrinkTableViewCell.swift */; };
+		72D25B3C2A0CFA82000645B1 /* CocktailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B3B2A0CFA82000645B1 /* CocktailModel.swift */; };
+		72D25B3E2A0CFBC9000645B1 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B3D2A0CFBC9000645B1 /* Drink.swift */; };
+		72D25B422A0CFE51000645B1 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B412A0CFE51000645B1 /* NetworkingError.swift */; };
+		72D25B442A0CFEB3000645B1 /* NetworkingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B432A0CFEB3000645B1 /* NetworkingResult.swift */; };
+		72D25B462A0D0276000645B1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D25B452A0D0276000645B1 /* Networking.swift */; };
 		9DBE1A7430E958F4F958E7C0 /* Pods_RxSwiftTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704DFD29C51D6C97333D4FA3 /* Pods_RxSwiftTutorial.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +56,14 @@
 		72D25B2D2A0CA20E000645B1 /* FetchingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingTableViewCell.swift; sourceTree = "<group>"; };
 		72D25B2F2A0CA59E000645B1 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		72D25B322A0CF562000645B1 /* CocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewController.swift; sourceTree = "<group>"; };
+		72D25B342A0CF9CA000645B1 /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
+		72D25B362A0CF9E0000645B1 /* CocktailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailTableViewCell.swift; sourceTree = "<group>"; };
+		72D25B382A0CF9E9000645B1 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
+		72D25B3B2A0CFA82000645B1 /* CocktailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailModel.swift; sourceTree = "<group>"; };
+		72D25B3D2A0CFBC9000645B1 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		72D25B412A0CFE51000645B1 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		72D25B432A0CFEB3000645B1 /* NetworkingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingResult.swift; sourceTree = "<group>"; };
+		72D25B452A0D0276000645B1 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		75B4E10B1B18918469508EE4 /* Pods-RxSwiftTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftTutorial.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftTutorial/Pods-RxSwiftTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		E2F1CCEC9F328AB16D0F852A /* Pods-RxSwiftTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftTutorial.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftTutorial/Pods-RxSwiftTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +195,8 @@
 		72D25B1E2A0B810A000645B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				72D25B402A0CFE30000645B1 /* DrinkModel */,
+				72D25B3F2A0CFE17000645B1 /* NetworkingModels */,
 				72D25B2F2A0CA59E000645B1 /* MusicModel.swift */,
 			);
 			path = Models;
@@ -226,9 +244,39 @@
 		72D25B312A0CF53B000645B1 /* NetworkingVC */ = {
 			isa = PBXGroup;
 			children = (
+				72D25B3A2A0CF9EC000645B1 /* Cells */,
 				72D25B322A0CF562000645B1 /* CocktailViewController.swift */,
+				72D25B342A0CF9CA000645B1 /* DrinksViewController.swift */,
 			);
 			path = NetworkingVC;
+			sourceTree = "<group>";
+		};
+		72D25B3A2A0CF9EC000645B1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				72D25B362A0CF9E0000645B1 /* CocktailTableViewCell.swift */,
+				72D25B382A0CF9E9000645B1 /* DrinkTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		72D25B3F2A0CFE17000645B1 /* NetworkingModels */ = {
+			isa = PBXGroup;
+			children = (
+				72D25B412A0CFE51000645B1 /* NetworkingError.swift */,
+				72D25B432A0CFEB3000645B1 /* NetworkingResult.swift */,
+				72D25B452A0D0276000645B1 /* Networking.swift */,
+			);
+			path = NetworkingModels;
+			sourceTree = "<group>";
+		};
+		72D25B402A0CFE30000645B1 /* DrinkModel */ = {
+			isa = PBXGroup;
+			children = (
+				72D25B3B2A0CFA82000645B1 /* CocktailModel.swift */,
+				72D25B3D2A0CFBC9000645B1 /* Drink.swift */,
+			);
+			path = DrinkModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,13 +397,21 @@
 				72D25B2E2A0CA20E000645B1 /* FetchingTableViewCell.swift in Sources */,
 				72D25B202A0B81A2000645B1 /* RegisterModel.swift in Sources */,
 				72D25B302A0CA59E000645B1 /* MusicModel.swift in Sources */,
+				72D25B422A0CFE51000645B1 /* NetworkingError.swift in Sources */,
+				72D25B392A0CF9E9000645B1 /* DrinkTableViewCell.swift in Sources */,
 				72D25B262A0C9DE1000645B1 /* MainTableViewCell.swift in Sources */,
 				720FEF6029F90AD100ECC9BB /* AppDelegate.swift in Sources */,
 				720FEF6229F90AD100ECC9BB /* SceneDelegate.swift in Sources */,
 				72D25B2B2A0CA01D000645B1 /* FetchingViewController.swift in Sources */,
 				72D25B332A0CF562000645B1 /* CocktailViewController.swift in Sources */,
+				72D25B462A0D0276000645B1 /* Networking.swift in Sources */,
+				72D25B372A0CF9E0000645B1 /* CocktailTableViewCell.swift in Sources */,
+				72D25B352A0CF9CA000645B1 /* DrinksViewController.swift in Sources */,
 				722C44812A04F85800DA54B0 /* RegisterViewController.swift in Sources */,
 				72D25B1A2A0A4A37000645B1 /* AvatarCollectionViewCell.swift in Sources */,
+				72D25B3E2A0CFBC9000645B1 /* Drink.swift in Sources */,
+				72D25B442A0CFEB3000645B1 /* NetworkingResult.swift in Sources */,
+				72D25B3C2A0CFA82000645B1 /* CocktailModel.swift in Sources */,
 				72D25B222A0C983E000645B1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

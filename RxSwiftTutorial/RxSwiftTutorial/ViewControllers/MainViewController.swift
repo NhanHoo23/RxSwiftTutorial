@@ -44,7 +44,6 @@ extension MainViewController {
             $0.dataSource = self
             $0.delegate = self
             $0.backgroundColor = .clear
-            $0.separatorStyle = .none
         }
 
     }
@@ -62,6 +61,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configsCell()
         cell.textLabel?.text = controllerNames[indexPath.row]
         cell.textLabel?.textColor = .label
+        cell.selectionStyle = .none
         
         return cell
     }
