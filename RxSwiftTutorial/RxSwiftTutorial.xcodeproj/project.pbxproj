@@ -97,6 +97,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7208A3A62A0E4A4B00174419 /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Operators;
+			sourceTree = "<group>";
+		};
 		720FEF5329F90AD100ECC9BB = {
 			isa = PBXGroup;
 			children = (
@@ -131,12 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				72D25B232A0C9DA9000645B1 /* MainVC */,
-				72D25B242A0C9DBD000645B1 /* Cell */,
-				72D25B212A0C983E000645B1 /* MainViewController.swift */,
 				72D25B282A0C9FE3000645B1 /* RegisterVC */,
-				72D25B1B2A0A4A3C000645B1 /* Cells */,
-				722C44802A04F85800DA54B0 /* RegisterViewController.swift */,
-				72D25B172A0A48F3000645B1 /* AvatarViewController.swift */,
 				72D25B292A0C9FF8000645B1 /* FetchingVC */,
 				72D25B312A0CF53B000645B1 /* NetworkingVC */,
 			);
@@ -154,6 +156,7 @@
 		72D25B0C2A050E25000645B1 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				7208A3A62A0E4A4B00174419 /* Operators */,
 				72D25B0D2A050E4B000645B1 /* BasicRxSwift */,
 			);
 			path = Examples;
@@ -205,6 +208,8 @@
 		72D25B232A0C9DA9000645B1 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				72D25B242A0C9DBD000645B1 /* Cell */,
+				72D25B212A0C983E000645B1 /* MainViewController.swift */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -220,6 +225,9 @@
 		72D25B282A0C9FE3000645B1 /* RegisterVC */ = {
 			isa = PBXGroup;
 			children = (
+				72D25B1B2A0A4A3C000645B1 /* Cells */,
+				722C44802A04F85800DA54B0 /* RegisterViewController.swift */,
+				72D25B172A0A48F3000645B1 /* AvatarViewController.swift */,
 			);
 			path = RegisterVC;
 			sourceTree = "<group>";
